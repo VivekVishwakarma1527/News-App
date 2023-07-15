@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav flex container">
+        <a href="javascript:void()" onclick="reload()" class="logo">
+          <img src="./image/news.png" alt="news image" />
+        </a>
+        <div class="nav-link">
+          <ul class="flex">
+            <li
+              class="hover-link nav-item"
+              onclick="navItemClick('ipl')"
+              id="ipl">
+              IPL
+            </li>
+            <li
+              class="hover-link nav-item"
+              onclick="navItemClick('finance')"
+              id="finance">
+              Finance
+            </li>
+            <li
+              class="hover-link nav-item"
+              onclick="navItemClick('politics')"
+              id="politics">
+              Politics
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input
+            type="text"
+            class="news-input"
+            placeholder="Search Here"
+            id="search-text" />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+    <!-- main -->
+    <main>
+      <div class="card-container container flex" id="card-container"></div>
+    </main>
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="http://via.placeholder.com/400x200"
+            alt="news-image"
+            id="news-image" />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is the Title</h3>
+          <h6 class="news-source" id="news-source">
+            Lorem ipsum dolor sit amet.
+          </h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
+            ipsam.
+          </p>
+        </div>
+      </div>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
